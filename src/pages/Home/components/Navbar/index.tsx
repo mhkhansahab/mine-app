@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { FC } from "react";
 import { styled } from "@mui/material/styles";
-import LogoName from "../../../../assets/LogoName.svg";
 import LogoIcon from "../../../../assets/LogoIcon.svg";
 
 const Container = styled("div")(({ theme }) => ({
@@ -22,6 +21,13 @@ const Button = styled("button")(({ theme }) => ({
   cursor: "pointer",
 }));
 
+const Heading = styled("div")(({ theme }) => ({
+  fontSize: "30px",
+  lineHeight: "40px",
+  fontFamily: "Space Mono",
+  fontWeight: "700",
+}));
+
 const Navbar: FC = () => {
   return (
     <Container>
@@ -34,7 +40,7 @@ const Navbar: FC = () => {
         }}
       >
         <img src={LogoIcon} /> &nbsp;
-        <img src={LogoName} />
+        <Heading>NODEMINE</Heading>
       </div>
       <div
         style={{ marginLeft: "auto", display: "flex", paddingRight: "15px" }}

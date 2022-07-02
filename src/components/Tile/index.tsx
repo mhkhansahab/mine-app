@@ -4,16 +4,17 @@ import { styled } from "@mui/material/styles";
 type Props = {
   imgUrl: string;
   name: string;
-  description: string;
 };
 
 const MainDiv = styled("div")(({ theme }) => ({
   width: "300px",
-  borderRadius: "15px",
-  border: `solid 4px ${theme.palette.primary.main}`,
-  padding: "7px",
-  paddingBottom: "18px",
   margin: "10px",
+  borderRadius: '5px',
+  background: '#0B0D21',
+  border: '1px solid #111730',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
 
   [theme.breakpoints.down("sm")]: {
     width: "90%",
@@ -24,35 +25,23 @@ const MainDiv = styled("div")(({ theme }) => ({
 
 const TileImage = styled("img")(({ theme }) => ({
   width: "100%",
-  borderRadius: "15px",
-  marginBottom: "7px",
 }));
 
-const TileName = styled("h1")(({ theme }) => ({
-  fontSize: "20px",
-  fontWeight: "bold",
-  textAlign: "left",
-  color: theme.palette.primary.main,
-  margin: "0px 10px",
+const TileName = styled("span")(({ theme }) => ({
+  fontWeight: '400',
+  fontSize: '16px',
+  lineHeight: '22px',
+  margin: "0px",
+  color: theme.palette.text.primary,
+  padding: '12px',
+  marginLeft: '8px'
 }));
 
-const TileDescription = styled("h1")(({ theme }) => ({
-  fontSize: "20px",
-  fontWeight: "100",
-  textAlign: "left",
-  color: theme.palette.primary.main,
-  margin: "0px 10px",
-  whiteSpace: "initial",
-  textOverflow: "ellipsis",
-  wordWrap: "break-word",
-}));
-
-const index: FC<Props> = ({ imgUrl, name, description }) => {
+const index: FC<Props> = ({ imgUrl, name }) => {
   return (
     <MainDiv>
       <TileImage src={imgUrl}></TileImage>
       <TileName>{name}</TileName>
-      <TileDescription>{description}</TileDescription>
     </MainDiv>
   );
 };

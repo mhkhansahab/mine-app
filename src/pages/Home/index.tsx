@@ -8,6 +8,9 @@ import SubSection3 from "./components/Subsection3";
 
 const Body = styled("div")(({ theme }) => ({
   width: "100%",
+  height: "100vh",
+  overflow: "auto",
+  backgroundImage: "linear-gradient(115.48deg, #040818 33.86%, #0C0C3F 100%)",
 }));
 
 const SectionsContainer = styled("div")(({ theme }) => ({

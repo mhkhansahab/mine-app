@@ -1,17 +1,37 @@
 import { FC } from "react";
 import { styled } from "@mui/material/styles";
+import {
+  CustomHeading,
+  CustomContainer,
+  GradientText,
+  CustomSubHeading,
+  VerticalSpace,
+} from "../CustomStyledComponents/index";
+import LatestWinners from "../Tables/LatestWinners";
+import MyWinnings from "../Tables/MyWinnings";
 
 const Container = styled("div")(({ theme }) => ({
   flex: "3",
-  height: "500px",
-  backgroundColor: "red",
-  alignItems: "center",
-  margin: "15px",
-  borderRadius: "7px",
+  textAlign: "left",
+  padding: "10px 20px",
 }));
 
 const SubSection1: FC = () => {
-  return <Container>SubSection1</Container>;
+  return (
+    <Container>
+      <CustomHeading>Next Giveaway</CustomHeading>
+      <CustomContainer>
+        <GradientText>2:21:56:42</GradientText>
+        <CustomSubHeading>Friday, August 23th at 5:00 UTC</CustomSubHeading>
+      </CustomContainer>
+      <VerticalSpace />
+      <CustomHeading>Latest Winners</CustomHeading>
+      <LatestWinners />
+      <VerticalSpace />
+      <CustomHeading>My Winnings</CustomHeading>
+      <MyWinnings />
+    </Container>
+  );
 };
 
 export default SubSection1;

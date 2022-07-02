@@ -9,6 +9,10 @@ const Container = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
   display: "flex",
   alignItems: "center",
+  position: "fixed",
+  top: "0",
+  left: "0",
+  right: "0",
 }));
 
 const Button = styled("button")(({ theme }) => ({

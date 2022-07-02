@@ -8,6 +8,7 @@ const Container = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   margin: "15px",
+  marginTop: "25px",
   borderRadius: "5px",
   border: "1px solid #F3F4F6",
 }));

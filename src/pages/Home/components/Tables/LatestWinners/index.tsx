@@ -22,14 +22,14 @@ const LatestWinners: FC = () => {
         <Td>2 days yield</Td>
       </TableRow>
       <TableRow>
-        <Td>1</Td>
-        <Td>271</Td>
-        <Td>2 days yield</Td>
+        <Td>2</Td>
+        <Td>283</Td>
+        <Td>2 AVAX</Td>
       </TableRow>
       <TableRow>
-        <Td>1</Td>
-        <Td>271</Td>
-        <Td>2 days yield</Td>
+        <Td>3</Td>
+        <Td>236</Td>
+        <Td>1 AVAX</Td>
       </TableRow>
     </TableContainer>
   );

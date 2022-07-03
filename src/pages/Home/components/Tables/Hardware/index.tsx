@@ -12,24 +12,19 @@ const Hardware: FC = () => {
   return (
     <TableContainer>
       <TableRowHeader>
-        <Th></Th>
-        <Th>NFT</Th>
-        <Th>Award</Th>
+        <Th>Days in Service</Th>
+        <Th>Model</Th>
+        <Th>Approx. Value</Th>
       </TableRowHeader>
       <TableRow>
-        <Td>1</Td>
-        <Td>271</Td>
-        <Td>2 days yield</Td>
+        <Td>8</Td>
+        <Td>Kadena ASIC</Td>
+        <Td>$6,000</Td>
       </TableRow>
       <TableRow>
-        <Td>1</Td>
-        <Td>271</Td>
-        <Td>2 days yield</Td>
-      </TableRow>
-      <TableRow>
-        <Td>1</Td>
-        <Td>271</Td>
-        <Td>2 days yield</Td>
+        <Td>24</Td>
+        <Td>GPU Rig</Td>
+        <Td>$15,000</Td>
       </TableRow>
     </TableContainer>
   );

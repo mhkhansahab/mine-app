@@ -15,6 +15,7 @@ const MainDiv = styled("div")(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-start',
+  minWidth: '300px',
 
   [theme.breakpoints.down("sm")]: {
     width: "90%",

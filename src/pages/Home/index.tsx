@@ -5,6 +5,8 @@ import Banner from "./components/Banner";
 import SubSection1 from "./components/SubSection1";
 import SubSection2 from "./components/SubSection2";
 import SubSection3 from "./components/Subsection3";
+import { useMediaQuery, useTheme } from "@mui/material";
+
 
 const Container = styled("div")(({ theme }) => ({}));
 
@@ -16,6 +18,17 @@ const Body = styled("div")(({ theme }) => ({
   backgroundImage: "linear-gradient(115.48deg, #040818 33.86%, #0C0C3F 100%)",
 }));
 
+const Button = styled("button")(({ theme }) => ({
+  width: "fit-content",
+  backgroundColor: theme.palette.primary.light,
+  padding: "10px 20px",
+  maxWidth: '70%',
+  margin: "9px",
+  color: "white",
+  border: "none",
+  cursor: "pointer",
+}));
+
 const SectionsContainer = styled("div")(({ theme }) => ({
   width: "100%",
   display: "flex",
@@ -23,10 +36,14 @@ const SectionsContainer = styled("div")(({ theme }) => ({
 }));
 
 const Index: FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Container>
       <Navbar />
       <Body>
+        {isMobile ? <Button>0xdB0...4660</Button> : null}
         <Banner />
         <SectionsContainer>
           <SubSection1 />

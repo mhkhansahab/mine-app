@@ -43,3 +43,20 @@ export const Td = styled("td")(({ theme }) => ({
   color: "#F9FAFB",
   opacity: "0.77",
 }));
+
+export const AccordionTableRow = styled("tr")(({ theme }) => ({
+  background: "#0B0D21",
+  padding: "0px 16px",
+  display: "flex",
+  justifyContent: "space-between",
+  borderBottom: "solid 1px #121428",
+}));
+
+
+export const AccordionTableRowHeader = styled("tr")(({ theme }) => ({
+  background: "#121428",
+  padding: "8px 30px",
+  display: "flex",
+  borderRadius: "3px",
+  justifyContent: "space-between",
+}));

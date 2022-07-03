@@ -27,11 +27,33 @@ const Button = styled("button")(({ theme }) => ({
   cursor: "pointer",
 }));
 
+const ButtonWrapper = styled("div")(({ theme }) => ({
+  height: "fit-content",
+  display: "flex",
+  alignItems: "center",
+  paddingLeft: "20px",
+  [theme.breakpoints.down("sm")]: {
+    paddingLeft: "10px",
+  },
+}));
+
+const ButtonWrapper2 = styled("div")(({ theme }) => ({
+  marginLeft: "auto",
+  display: "flex",
+  paddingRight: "15px",
+  [theme.breakpoints.down("sm")]: {
+    paddingRight: "10px",
+  },
+}));
+
 const Heading = styled("div")(({ theme }) => ({
   fontSize: "30px",
   lineHeight: "40px",
   fontFamily: "Space Mono",
   fontWeight: "700",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: '20px'
+  },
 }));
 
 const Navbar: FC = () => {
@@ -40,23 +62,16 @@ const Navbar: FC = () => {
 
   return (
     <Container>
-      <div
-        style={{
-          height: "fit-content",
-          display: "flex",
-          alignItems: "center",
-          paddingLeft: "20px",
-        }}
-      >
+      <ButtonWrapper>
         <img src={LogoIcon} /> &nbsp;
         <Heading>NODEMINE</Heading>
-      </div>
-      <div
-        style={{ marginLeft: "auto", display: "flex", paddingRight: "15px" }}
-      >
+      </ButtonWrapper>
+
+      <ButtonWrapper2>
         <Button>MINT NOW</Button>
         {!isMobile ? <Button>0xdB0...4660</Button> : null}
-      </div>
+      </ButtonWrapper2>
+
     </Container>
   );
 };

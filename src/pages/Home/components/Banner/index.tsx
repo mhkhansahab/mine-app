@@ -15,6 +15,9 @@ const Container = styled("div")(({ theme }) => ({
   border: "1px solid #F3F4F6",
   flexWrap: "wrap",
   position: "relative",
+  [theme.breakpoints.down("sm")]: {
+    marginTop: '5px'
+  },
 }));
 
 const Heading = styled("div")(({ theme }) => ({
@@ -24,7 +27,7 @@ const Heading = styled("div")(({ theme }) => ({
   fontWeight: "700",
 
   [theme.breakpoints.down("sm")]: {
-    fontSize: "30px",
+    fontSize: "20px",
     lineHeight: "30px",
   },
 }));
@@ -35,6 +38,10 @@ const SubHeading = styled("div")(({ theme }) => ({
   marginTop: "15px",
   fontFamily: "Open Sans",
   fontWeight: "400",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "14px",
+    marginTop: '5px'
+  },
 }));
 
 const Banner: FC = () => {

@@ -19,7 +19,7 @@ const MainDiv = styled("div")(({ theme }) => ({
 
   [theme.breakpoints.down("sm")]: {
     width: "90%",
-    margin: "auto",
+    margin: "5px",
     marginTop: "15px",
   },
 }));

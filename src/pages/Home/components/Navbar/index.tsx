@@ -2,6 +2,7 @@
 import { FC } from "react";
 import { styled } from "@mui/material/styles";
 import LogoIcon from "../../../../assets/LogoIcon.svg";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 const Container = styled("div")(({ theme }) => ({
   width: "100%",
@@ -13,6 +14,7 @@ const Container = styled("div")(({ theme }) => ({
   top: "0",
   left: "0",
   right: "0",
+  zIndex: "1000",
 }));
 
 const Button = styled("button")(({ theme }) => ({
@@ -33,6 +35,9 @@ const Heading = styled("div")(({ theme }) => ({
 }));
 
 const Navbar: FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Container>
       <div
@@ -50,7 +55,7 @@ const Navbar: FC = () => {
         style={{ marginLeft: "auto", display: "flex", paddingRight: "15px" }}
       >
         <Button>MINT NOW</Button>
-        <Button>0xdB0...4660</Button>
+        {!isMobile ? <Button>0xdB0...4660</Button> : null}
       </div>
     </Container>
   );

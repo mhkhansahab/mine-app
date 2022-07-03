@@ -19,6 +19,7 @@ const Body = styled("div")(({ theme }) => ({
 const SectionsContainer = styled("div")(({ theme }) => ({
   width: "100%",
   display: "flex",
+  flexWrap: "wrap",
 }));
 
 const Index: FC = () => {

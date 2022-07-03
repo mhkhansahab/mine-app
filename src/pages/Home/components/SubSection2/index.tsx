@@ -13,6 +13,11 @@ const Container = styled("div")(({ theme }) => ({
   flex: "3",
   textAlign: "left",
   padding: "10px 20px",
+  minWidth: "400px",
+
+  [theme.breakpoints.down("sm")]: {
+    minWidth: "300px",
+  },
 }));
 
 const SubSection2: FC = () => {

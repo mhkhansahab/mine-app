@@ -13,9 +13,10 @@ const Container = styled("div")(({ theme }) => ({
   borderRadius: "7px",
   display: "flex",
   alignItems: "flex-start",
-  overflowX: "scroll",
-  "::-webkit-scrollbar": {
-    display: "none",
+   
+  [theme.breakpoints.down("lg")]: {
+    margin: '0 auto',
+    width: '80%'
   },
 }));
 
@@ -24,6 +25,10 @@ const InnerContainer = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   cursor: "grab",
+  overflowX: "scroll",
+  "::-webkit-scrollbar": {
+    display: "none",
+  },
 }));
 
 const ButtonsContainer = styled("div")(({ theme }) => ({

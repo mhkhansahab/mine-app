@@ -4,6 +4,7 @@ import Tile from "./../../../../components/Tile/index";
 import img from "./../../../../assets/platinum.png";
 import leftArrow from "./../../../../assets/left-arrow.png";
 import rightArrow from "./../../../../assets/right-arrow.png";
+import ScrollContainer from 'react-indiana-drag-scroll';
 
 const Container = styled("div")(({ theme }) => ({
   position: "relative",
@@ -13,10 +14,11 @@ const Container = styled("div")(({ theme }) => ({
   borderRadius: "7px",
   display: "flex",
   alignItems: "flex-start",
-   
+
   [theme.breakpoints.down("lg")]: {
     margin: '0 auto',
-    width: '80%'
+    width: '80%',
+    marginBottom: '20px'
   },
 }));
 
@@ -53,13 +55,17 @@ const SubSection3: FC = () => {
   const ref: any = useRef();
 
   function scrollLeft(e: any) {
-    console.log(ref.current);
-    console.log(ref.current.scrollLeft);
+    ref.current.scrollTo({
+      left: ref.current?.scrollLeft - 150,
+      behavior: 'smooth'
+    });
   }
 
   function scrollRight(e: any) {
-    console.log(ref.current);
-    console.log(ref.current.scrollRight);
+    ref.current.scrollTo({
+      left: ref.current?.scrollLeft + 150,
+      behavior: 'smooth'
+    });
   }
 
   return (
@@ -73,11 +79,13 @@ const SubSection3: FC = () => {
         </Button>
       </ButtonsContainer>
 
-      <InnerContainer ref={ref}>
-        <Tile name="#283 - Platinum" imgUrl={img} />
-        <Tile name="#283 - Platinum" imgUrl={img} />
-        <Tile name="#283 - Platinum" imgUrl={img} />
-        <Tile name="#283 - Platinum" imgUrl={img} />
+      <InnerContainer>
+        <ScrollContainer  innerRef={ref} style={{display: 'flex'}} horizontal={true}>
+          <Tile name="#283 - Platinum" imgUrl={img} />
+          <Tile name="#283 - Platinum" imgUrl={img} />
+          <Tile name="#283 - Platinum" imgUrl={img} />
+          <Tile name="#283 - Platinum" imgUrl={img} />
+        </ScrollContainer>
       </InnerContainer>
     </Container>
   );

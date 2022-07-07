@@ -25,6 +25,9 @@ const Button = styled("button")(({ theme }) => ({
   color: "white",
   border: "none",
   cursor: "pointer",
+  fontFamily: "Space Mono",
+  fontWeight: "700",
+  fontSize: "16px",
 }));
 
 const ButtonWrapper = styled("div")(({ theme }) => ({
@@ -52,7 +55,7 @@ const Heading = styled("div")(({ theme }) => ({
   fontFamily: "Space Mono",
   fontWeight: "700",
   [theme.breakpoints.down("sm")]: {
-    fontSize: '20px'
+    fontSize: "20px",
   },
 }));
 
@@ -71,7 +74,6 @@ const Navbar: FC = () => {
         <Button>MINT NOW</Button>
         {!isMobile ? <Button>0xdB0...4660</Button> : null}
       </ButtonWrapper2>
-
     </Container>
   );
 };

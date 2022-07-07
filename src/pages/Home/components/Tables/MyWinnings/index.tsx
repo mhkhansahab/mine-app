@@ -9,32 +9,46 @@ import {
 } from "../Components/index";
 
 const MyWinnings: FC = () => {
+  let data = [
+    {
+      date: "23-08-22",
+      rank: "1",
+      nft: "271",
+      award: "120 USDC",
+    },
+    {
+      date: "23-08-22",
+      rank: "1",
+      nft: "271",
+      award: "120 USDC",
+    },
+    {
+      date: "23-08-22",
+      rank: "1",
+      nft: "271",
+      award: "120 USDC",
+    },
+  ];
+
   return (
     <TableContainer>
       <TableRowHeader>
-        <Th>Date</Th>
-        <Th>Rank</Th>
-        <Th>NFT</Th>
-        <Th>Award</Th>
+        <Th style={{ textAlign: "left" }}>Date</Th>
+        <Th style={{ textAlign: "center" }}>Rank</Th>
+        <Th style={{ textAlign: "center" }}>NFT</Th>
+        <Th style={{ textAlign: "right" }}>Award</Th>
       </TableRowHeader>
-      <TableRow>
-        <Td>23-08-22</Td>
-        <Td>1</Td>
-        <Td>271</Td>
-        <Td>120 USDC</Td>
-      </TableRow>
-      <TableRow>
-        <Td>23-08-22</Td>
-        <Td>2</Td>
-        <Td>283</Td>
-        <Td>2 AVAX</Td>
-      </TableRow>
-      <TableRow>
-        <Td>23-08-22</Td>
-        <Td>3</Td>
-        <Td>284</Td>
-        <Td>1 AVAX</Td>
-      </TableRow>
+
+      {data.map((e, i) => {
+        return (
+          <TableRow isLastRow={data.length === i + 1 ? true : false}>
+            <Td style={{ textAlign: "left" }}>{e.date}</Td>
+            <Td style={{ textAlign: "center" }}>{e.rank}</Td>
+            <Td style={{ textAlign: "center" }}>{e.nft}</Td>
+            <Td style={{ textAlign: "right" }}>{e.award}</Td>
+          </TableRow>
+        );
+      })}
     </TableContainer>
   );
 };

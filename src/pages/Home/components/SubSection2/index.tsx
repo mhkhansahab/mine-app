@@ -20,6 +20,15 @@ const Container = styled("div")(({ theme }) => ({
   },
 }));
 
+const TableContainer = styled("div")(({ theme }) => ({
+  width: "100%",
+  overflow: "auto",
+
+  "::-webkit-scrollbar": {
+    display: "none",
+  },
+}));
+
 const SubSection2: FC = () => {
   return (
     <Container>
@@ -31,10 +40,14 @@ const SubSection2: FC = () => {
       </CustomContainer>
       <VerticalSpace />
       <CustomHeading>Hardware</CustomHeading>
-      <Hardware />
+      <TableContainer>
+        <Hardware />
+      </TableContainer>
       <VerticalSpace />
       <CustomHeading>Investments</CustomHeading>
-      <Investments />
+      <TableContainer>
+        <Investments />
+      </TableContainer>
     </Container>
   );
 };

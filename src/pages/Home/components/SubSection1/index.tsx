@@ -21,6 +21,15 @@ const Container = styled("div")(({ theme }) => ({
   },
 }));
 
+const TableContainer = styled("div")(({ theme }) => ({
+  width: "100%",
+  overflow: "auto",
+
+  "::-webkit-scrollbar": {
+    display: "none",
+  },
+}));
+
 const SubSection1: FC = () => {
   return (
     <Container>
@@ -31,10 +40,14 @@ const SubSection1: FC = () => {
       </CustomContainer>
       <VerticalSpace />
       <CustomHeading>Latest Winners</CustomHeading>
-      <LatestWinners />
+      <TableContainer>
+        <LatestWinners />
+      </TableContainer>
       <VerticalSpace />
       <CustomHeading>My Winnings</CustomHeading>
-      <MyWinnings />
+      <TableContainer>
+        <MyWinnings />
+      </TableContainer>
     </Container>
   );
 };

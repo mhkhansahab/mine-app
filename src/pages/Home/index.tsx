@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { FC } from "react";
 import { styled } from "@mui/material/styles";
 import Navbar from "./components/Navbar";
@@ -6,27 +7,36 @@ import SubSection1 from "./components/SubSection1";
 import SubSection2 from "./components/SubSection2";
 import SubSection3 from "./components/Subsection3";
 import { useMediaQuery, useTheme } from "@mui/material";
+import BackgroundLogo from "../../assets/backgroundLogo.png";
 
-
-const Container = styled("div")(({ theme }) => ({}));
+const Container = styled("div")(({ theme }) => ({
+  zIndex: "-200",
+  backgroundImage: "linear-gradient(115.48deg, #040818 33.86%, #0C0C3F 100%)",
+}));
 
 const Body = styled("div")(({ theme }) => ({
   width: "100%",
-  height: "calc (100vh - 70px)",
+  height: "calc(100vh - 70px)",
   marginTop: "70px",
   overflow: "auto",
-  backgroundImage: "linear-gradient(115.48deg, #040818 33.86%, #0C0C3F 100%)",
+  overflowX: "hidden",
+  backgroundImage: `url(${BackgroundLogo})`,
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "bottom right",
 }));
 
 const Button = styled("button")(({ theme }) => ({
   width: "fit-content",
   backgroundColor: theme.palette.primary.light,
   padding: "10px 20px",
-  maxWidth: '70%',
+  maxWidth: "70%",
   margin: "9px",
   color: "white",
   border: "none",
   cursor: "pointer",
+  fontFamily: "Space Mono",
+  fontWeight: "700",
+  fontSize: "16px",
 }));
 
 const SectionsContainer = styled("div")(({ theme }) => ({

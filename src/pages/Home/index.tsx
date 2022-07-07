@@ -23,6 +23,7 @@ const Body = styled("div")(({ theme }) => ({
   backgroundImage: `url(${BackgroundLogo})`,
   backgroundRepeat: "no-repeat",
   backgroundPosition: "bottom right",
+  paddingBottom: "50px",
 }));
 
 const Button = styled("button")(({ theme }) => ({

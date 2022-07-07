@@ -5,25 +5,21 @@ import img from "./../../../../assets/platinum.png";
 import leftArrow from "./../../../../assets/left-arrow.png";
 import rightArrow from "./../../../../assets/right-arrow.png";
 import ScrollContainer from "react-indiana-drag-scroll";
+import { CustomHeading } from "../CustomStyledComponents";
 
 const Container = styled("div")(({ theme }) => ({
-  position: "relative",
-  userSelect: "none",
-  width: "400px",
-  margin: "15px",
-  borderRadius: "7px",
-  display: "flex",
-  alignItems: "flex-start",
+  flex: "3",
+  textAlign: "left",
+  padding: "10px 20px",
+  minWidth: "400px",
 
-  [theme.breakpoints.down("lg")]: {
-    margin: "0 auto",
-    width: "90%",
-    marginBottom: "20px",
+  [theme.breakpoints.down("sm")]: {
+    minWidth: "300px",
   },
 }));
 
 const InnerContainer = styled("div")(({ theme }) => ({
-  marginTop: "40px",
+  marginTop: "0px",
   display: "flex",
   alignItems: "center",
   cursor: "grab",
@@ -34,9 +30,6 @@ const InnerContainer = styled("div")(({ theme }) => ({
 }));
 
 const ButtonsContainer = styled("div")(({ theme }) => ({
-  position: "absolute",
-  right: "0",
-  top: "0",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -74,7 +67,8 @@ const SubSection3: FC = () => {
 
   return (
     <Container>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", alignItems: "center", width: "100%" }}>
+        <CustomHeading>My NodeMine Metals</CustomHeading>
         <div style={{ marginLeft: "auto" }}>
           <ButtonsContainer>
             <Button onClick={scrollLeft}>

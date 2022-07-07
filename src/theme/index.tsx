@@ -1,7 +1,6 @@
-import { FC, useEffect, useMemo } from "react";
+import { FC, useEffect, useMemo, useState } from "react";
 import { CssBaseline, PaletteMode, ThemeOptions } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useThemeSwitch } from "../hooks/switchTheme";
 
 declare module "@mui/material/styles" {
   interface BreakpointOverrides {
@@ -116,7 +115,7 @@ const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
 });
 
 const Theme: FC = ({ children }) => {
-  const [mode] = useThemeSwitch();
+  const [mode] = useState("dark");
 
   const theme = useMemo(
     () => createTheme(getDesignTokens(mode as PaletteMode)),

@@ -1,21 +1,14 @@
 import { FC } from "react";
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
-import Router from "./router/index";
-import { Provider } from "react-redux";
-import { store } from "./redux/store";
 import MuiTheme from "./theme";
+import Home from "./pages/Home";
 
 const App: FC = () => {
   return (
     <div className="App">
-      <Provider store={store}>
-        <MuiTheme>
-          <BrowserRouter>
-            <Router />
-          </BrowserRouter>
-        </MuiTheme>
-      </Provider>
+      <MuiTheme>
+        <Home />
+      </MuiTheme>
     </div>
   );
 };

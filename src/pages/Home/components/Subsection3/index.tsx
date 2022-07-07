@@ -74,14 +74,18 @@ const SubSection3: FC = () => {
 
   return (
     <Container>
-      <ButtonsContainer>
-        <Button onClick={scrollLeft}>
-          <img src={leftArrow} alt="Left Arrow" />
-        </Button>
-        <Button onClick={scrollRight}>
-          <img src={rightArrow} alt="Right Arrow" />
-        </Button>
-      </ButtonsContainer>
+      <div style={{ display: "flex" }}>
+        <div style={{ marginLeft: "auto" }}>
+          <ButtonsContainer>
+            <Button onClick={scrollLeft}>
+              <img src={leftArrow} alt="Left Arrow" />
+            </Button>
+            <Button onClick={scrollRight}>
+              <img src={rightArrow} alt="Right Arrow" />
+            </Button>
+          </ButtonsContainer>
+        </div>
+      </div>
 
       <InnerContainer>
         <ScrollContainer

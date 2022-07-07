@@ -51,8 +51,8 @@ const Investments: FC = () => {
   return (
     <TableContainer>
       <AccordionTableRowHeader>
-        <Th>NFT</Th>
-        <Th style={{ marginRight: "40px" }}>Award</Th>
+        <Th style={{ textAlign: "left" }}>Protocol</Th>
+        <Th style={{ textAlign: "right" }}>Investment</Th>
       </AccordionTableRowHeader>
 
       {tilesData
@@ -83,8 +83,12 @@ const Investments: FC = () => {
                         width: "100%",
                       }}
                     >
-                      <Td>{tile?.option1}</Td>
-                      <Td>{tile?.option2}</Td>
+                      <Td style={{ textAlign: "left", width: "150px" }}>
+                        {tile?.option1}
+                      </Td>
+                      <Td style={{ textAlign: "right", width: "150px" }}>
+                        {tile?.option2}
+                      </Td>
                     </div>
                   </AccordionSummary>
                   <AccordionDetails>
